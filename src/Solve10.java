@@ -15,9 +15,7 @@
 public class Solve10 {
     public static void main(String[] args) {
         int[] arr = solve10();
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i]);
-        }
+        System.out.println(3 / 4);
     }
 
     static int[] solve10() {
@@ -39,13 +37,16 @@ public class Solve10 {
                 if (diff % j != 0) {
                     break;
                 }
-                diff = diff / j;
-                if (diff == 1) {
-                    arr[0] = x;
-                    arr[1] = j;
-                    break;
 
+                diff = diff / j;
+                if (diff < j || diff == 1) {
+                    break;
                 }
+            }
+            if (diff == 1) {
+                arr[0] = x;
+                arr[1] = 10 - x;
+                break;
 
             }
 
