@@ -31,7 +31,7 @@
 
 public class GuthrieSequence {
     public static void main(String[] args) {
-        int[] arr = { 8, 4, 2, 1 };
+        int[] arr = { 7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1 };
         System.out.print(isGutherieSequence(arr));
     }
 
@@ -47,7 +47,7 @@ public class GuthrieSequence {
                     return 0;
                 }
             } else {
-                if (arr[i + 1] != (arr[i] * 3 + 2)) {
+                if (arr[i + 1] != (arr[i] * 3 + 1)) {
                     return 0;
                 }
 
