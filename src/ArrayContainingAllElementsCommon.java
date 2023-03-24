@@ -1,6 +1,6 @@
 public class ArrayContainingAllElementsCommon {
     public static void main(String[] args) {
-        int[] first = null;
+        int[] first = { 1, 2, 4, 6 };
         int[] second = { 1, 2, 3 };
         int[] result = commonArray(first, second);
         for (int i = 0; i < result.length; i++) {

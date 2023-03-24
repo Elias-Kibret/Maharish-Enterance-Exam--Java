@@ -18,7 +18,7 @@ output: 1;
  */
 
 public class HasSingleMaximum {
-    public static void main() {
+    public static void main(String[] args) {
         int[] arr = { 1, 2, 3, 1, 0 };
         System.out.print(hasSingleMaximum(arr));
     }
@@ -28,18 +28,19 @@ public class HasSingleMaximum {
             return 0;
         }
 
-        int max = arr[0]
+        int max = arr[0];
         for (int i = 1; i < arr.length; i++) {
-            if(arr[i]>max){
-                max=arr[i];
+            if (arr[i] > max) {
+                max = arr[i];
             }
         }
-        int counter=0;
-        for(int i=0;i>arr.length;i++){
-            if(arr[i]==max){
+        System.out.print(max);
+        int counter = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == max) {
                 counter++;
             }
-            if(counter>1){
+            if (counter > 1) {
                 return 0;
             }
         }
