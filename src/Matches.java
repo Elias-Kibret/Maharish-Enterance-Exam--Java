@@ -1,3 +1,14 @@
+/* A simple pattern match on the elements of an array...
+ * 
+ * https://www.youtube.com/watch?v=ItG6Ftq4sOI&list=PLHK18USBY-PfYp_NwHJe3gpsbbaGWxm8u&index=13
+ * 
+ * Example 
+ * input A={1,2,3,-5-5,2,3,18}
+ * p={3,-2,3}
+ * 
+ * 
+ */
+
 public class Matches {
     public static void main(String[] args) {
         int[] arr = { 1, 2, 3, -5, -5, 2, 3, 18 };
