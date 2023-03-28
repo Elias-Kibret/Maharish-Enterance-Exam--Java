@@ -28,7 +28,7 @@ a is                       then function returns                        reason
 
 {0, -3, 0, -4, 0}              3344                                because abs(0-(-3)=3, abs(-3-0)=3, abs(0-(-4))=4, abs(-4-0)=4
 {-1, 5, 8, 17, 15}            -6392                                because abs(-1-5)=6, abs(5-8)=3, abs(8-17)=9, abs(17-15)=2; the number is negative because the first element of the array is negative
-{1, 5, 8, 17, 15}            4392                                  because abs(1-5)=4, remaining digits are the same as previous
+{1, 5, 8, 17, 15}              4392                                because abs(1-5)=4, remaining digits are the same as previous
 
 
 

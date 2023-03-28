@@ -39,8 +39,7 @@ public class IsCubePowerfull {
         }
         int sum = n;
         while (n != 0) {
-            int x = (n % 10) * (n % 10) * (n % 10);
-            sum = sum - x;
+            sum = sum - ((n % 10) * (n % 10) * (n % 10));
             n = n / 10;
         }
         return sum == 0 ? 1 : 0;
