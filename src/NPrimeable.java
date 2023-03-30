@@ -25,3 +25,26 @@ If a is                       and n is         then function                    
 
 
 */
+
+public class NPrimeable {
+    public static void main(String[] args) {
+        int[] arr = { 5, 15, 27 };
+        System.out.print(isNPrimeable(arr, 3));
+    }
+
+    public static int isNPrimeable(int[] a, int n) {
+        if (a.length < 1) {
+            return 0;
+        }
+        for (int j = 0; j < a.length; j++) {
+            int factor = 2;
+            while (factor < (a[j] + n)) {
+                if ((a[j] + n) % 2 == 0) {
+                    return 0;
+                }
+                factor++;
+            }
+        }
+        return 1;
+    }
+}
