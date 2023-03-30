@@ -1,6 +1,6 @@
 public class Complete {
     public static void main(String[] args) {
-        int[] arr = { 36, -28 };
+        int[] arr = { 3, 7, 23, 13, 107, -99, 97, 81 };
         System.out.print(isComplete(arr));
     }
 
@@ -19,9 +19,11 @@ public class Complete {
             while (squareRoot <= arr[i]) {
                 if (squareRoot * squareRoot == arr[i]) {
                     isSquere = true;
+                    System.out.println(squareRoot);
                 }
                 squareRoot++;
             }
+
             if (i <= arr.length - 1) {
                 for (int j = i + 1; j < arr.length; j++) {
                     if (arr[j] + arr[i] == 8) {
