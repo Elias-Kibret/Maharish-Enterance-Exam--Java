@@ -1,6 +1,7 @@
 public class Complete {
     public static void main(String[] args) {
-
+        int[] arr = { 36, -28 };
+        System.out.print(isComplete(arr));
     }
 
     public static int isComplete(int[] arr) {
