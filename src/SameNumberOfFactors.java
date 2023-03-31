@@ -21,8 +21,11 @@ public class SameNumberOfFactors {
     }
 
     public static int sameNumberOfFactors(int n1, int n2) {
-        if (n1 < 1 || n2 < 1) {
+        if (n1 < 0 || n2 < 0) {
             return 0;
+        }
+        if (n1 == n2) {
+            return 1;
         }
         if (numberOfFactors(n1) == numberOfFactors(n2)) {
             return 1;
