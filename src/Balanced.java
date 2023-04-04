@@ -18,9 +18,7 @@ public class Balanced {
     }
 
     public static int balanced(int[] arr) {
-        if (arr.length % 2 != 0) {
-            return 0;
-        }
+
         int countEven = 0, countOdd = 0;
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] % 2 == 0) {
