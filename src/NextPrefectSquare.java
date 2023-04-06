@@ -7,19 +7,15 @@
 
 public class NextPrefectSquare {
     public static void main(String[] args) {
-        int n = 0;
+        int n = 6;
         System.out.print(nextPrefectSquare(n));
     }
 
     public static int nextPrefectSquare(int n) {
-        if (n < 0) {
-            return 0;
-        }
-        int factor = 1;
-        int square = 1;
+        int square = 0, squareRoot = 0;
         while (square <= n) {
-            square = factor * factor;
-            factor++;
+            square = squareRoot * squareRoot;
+            squareRoot++;
         }
         return square;
     }
