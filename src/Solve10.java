@@ -15,43 +15,82 @@
 public class Solve10 {
     public static void main(String[] args) {
         int[] arr = solve10();
-        System.out.println(3 / 4);
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i]);
+        }
     }
 
+    // static int[] solve10() {
+    // int[] arr = new int[2];
+    // int tenFactorial = 1;
+    // for (int i = 1; i <= 10; i++) {
+    // tenFactorial = i * tenFactorial;
+
+    // }
+    // for (int x = 1; x < 10; x++) {
+    // int xFactorial = 1;
+    // for (int i = 1; i <= x; i++) {
+    // xFactorial = i * xFactorial;
+
+    // }
+    // int diff = tenFactorial - xFactorial;
+
+    // for (int j = 10 - x; j > 1; j--) {
+    // if (diff % j != 0) {
+    // break;
+    // }
+
+    // diff = diff / j;
+    // if (diff < j || diff == 1) {
+    // break;
+    // }
+    // }
+    // if (diff == 1) {
+    // arr[0] = x;
+    // arr[1] = 10 - x;
+    // break;
+
+    // }
+
+    // }
+
+    // return arr;
+    // }
+
     static int[] solve10() {
-        int[] arr = new int[2];
+        int factorialX = 1;
+        int factorialY = 1;
+        int x = 1;
+        int y = 1;
+        boolean matched = false;
         int tenFactorial = 1;
+        int[] result = new int[2];
+
         for (int i = 1; i <= 10; i++) {
-            tenFactorial = i * tenFactorial;
-
+            tenFactorial *= i;
         }
-        for (int x = 1; x < 10; x++) {
-            int xFactorial = 1;
-            for (int i = 1; i <= x; i++) {
-                xFactorial = i * xFactorial;
 
-            }
-            int diff = tenFactorial - xFactorial;
-
-            for (int j = 10 - x; j > 1; j--) {
-                if (diff % j != 0) {
-                    break;
-                }
-
-                diff = diff / j;
-                if (diff < j || diff == 1) {
+        for (x = 1; x <= 10 && !matched; x++) {
+            factorialX *= x;
+            factorialY = 1;
+            for (y = 1; y <= 10 && !matched; y++) {
+                factorialY *= y;
+                if (tenFactorial == factorialX + factorialY) {
+                    matched = true;
                     break;
                 }
             }
-            if (diff == 1) {
-                arr[0] = x;
-                arr[1] = 10 - x;
-                break;
-
-            }
-
         }
 
-        return arr;
+        if (matched) {
+            result[0] = x;
+            result[1] = y;
+        } else {
+            result[0] = 0;
+            result[1] = 0;
+        }
+
+        return result;
+
     }
 }
