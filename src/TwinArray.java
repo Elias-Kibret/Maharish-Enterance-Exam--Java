@@ -19,7 +19,7 @@ public class TwinArray {
                 }
 
             }
-            if (!false) {
+            if (!found) {
                 return 0;
             }
 
