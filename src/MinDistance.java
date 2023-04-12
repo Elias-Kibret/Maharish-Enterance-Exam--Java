@@ -9,7 +9,7 @@ The function signature is
 
 public class MinDistance {
     public static void main(String[] args) {
-        System.out.println(minDistance(1001));
+        System.out.println(minDistance(11));
     }
 
     public static int minDistance(int n) {
@@ -18,20 +18,28 @@ public class MinDistance {
         }
         int diff = Integer.MAX_VALUE;
         int factor = 2;
-        int prevFactor = 1;
+        int prevFactor = 2;
+        int count = 0;
 
-        while (factor <= n) {
+        while (factor < n) {
             if (n % factor == 0) {
-
-                if ((factor - prevFactor) < diff) {
+                if (count == 0) {
+                    prevFactor = factor;
+                    count++;
+                } else if (factor - prevFactor < diff && count > 0) {
+                    count++;
                     diff = factor - prevFactor;
-
                 }
                 prevFactor = factor;
-
             }
             factor++;
         }
-        return diff;
+        if (count > 1) {
+            return diff;
+        } else if (count == 1) {
+            return 0;
+        }
+
+        return -1;
     }
 }
