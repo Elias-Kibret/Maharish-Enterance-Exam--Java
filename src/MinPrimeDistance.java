@@ -1,7 +1,8 @@
-/*Write a function named minPrimeDistance that returns the smallest distance between
+/* Write a imeDistance that returns the smallest distance between
 two prime factors of a number. For example, consider 13013. Its prime factors are 1, 7, 11, 13 and
 13013. minPrimeDistance(13013) would return 2 because the smallest distance between any
-two prime factors is 2 (13 - 11 = 2). As another example, minPrimeDistance (8) would return 1 */
+two prime factors is 2 (13 - 11 = 2). As another example, minPrimeDistance (8) would return 1
+ */
 
 public class MinPrimeDistance {
     public static void main(String[] args) {
