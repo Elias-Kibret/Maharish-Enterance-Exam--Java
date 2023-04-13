@@ -13,6 +13,7 @@ public class FibbNumber {
             return 0;
         }
         int sum = 0, prevFib = 0, fib = 1;
+        int diff=Integer.MI
         while (fib <= n) {
             sum = prevFib + fib;
             prevFib = fib;
