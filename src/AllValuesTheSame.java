@@ -1,3 +1,10 @@
+/*Write a function named allValuesTheSame that returns 1 if all elements of its
+argument array have the same value. Otherwise, it returns 0.
+If you are programming in Java or C#, the function signature is
+int allValuesTheSame(int[ ] a)
+If you are programming in C or C++, the function signature is
+int allValuesTheSame(int a[ ], int len) where len is the number of elements in a
+Examples: */
 public class AllValuesTheSame {
     public static void main(String[] args) {
         int[] arr = { 1, -2343456, 1, -2343456 };
