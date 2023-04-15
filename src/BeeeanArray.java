@@ -1,5 +1,3 @@
-import java.util.function.BiPredicate;
-
 public class BeeeanArray {
     public static void main(String[] args) {
         int[] arr = { 9, 6, 18 };
