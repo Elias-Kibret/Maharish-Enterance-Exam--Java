@@ -1,5 +1,3 @@
-import java.text.NumberFormat.Style;
-
 public class EvenSpaced {
     public static void main(String[] args) {
         int[] arr = { 200, 10, 151, 160 };
